@@ -36,6 +36,8 @@
 
 <script>
 import * as IS from "isnext";
+import * as player from '../player';
+
 export default {
   name: 'Central',
   data() {
@@ -59,7 +61,7 @@ export default {
       let result;
       result = IS.progression.get_chord_for_function(this.tones[i], this.key); 
       console.log(result);
-      IS.progression.play_chord(result);
+      player.play_chord(result);
     },
   },
 };

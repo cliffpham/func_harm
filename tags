@@ -3,10 +3,697 @@
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.8	//
-IS	src/js/main.js	/^var IS = require("isnext");$/;"	v
-T	src/js/player.js	/^var T = require("tone");$/;"	v
-module.exports.play_chord	src/js/player.js	/^  play_chord: function(chord, duration) {$/;"	m
-module.exports.presets	client/babel.config.js	/^  presets: [$/;"	p
-normal	src/js/player.js	/^var normal = require("isnext").normal;$/;"	v
-teoria	src/js/player.js	/^var teoria = require("teoria");$/;"	v
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+A4	build/main.bundle.js	/^module.exports.A4 = [3, 3]; \/\/ Relative to C0 (scientic notation, ~16.35Hz)$/;"	a
+ALL_LOOKUPS	build/main.bundle.js	/^var ALL_LOOKUPS = {};$/;"	o
+AUG_SUFFIX	build/main.bundle.js	/^var AUG_SUFFIX = "+";$/;"	r
+CHORDS_IN_KEY	build/main.bundle.js	/^grammar_matrix.CHORDS_IN_KEY = CHORDS_IN_KEY;$/;"	r
+CHORDS_IN_KEY	build/main.bundle.js	/^var CHORDS_IN_KEY = {};$/;"	o
+Chord	build/main.bundle.js	/^function Chord(root, name) {$/;"	f
+Chord	build/main.bundle.js	/^var Chord = require('.\/lib\/chord');$/;"	r
+Counter	build/main.bundle.js	/^function Counter() {$/;"	f
+Ctor	build/main.bundle.js	/^  var Ctor = function(){};$/;"	f
+DEBUG	build/main.bundle.js	/^var DEBUG=process.env.DEBUG;$/;"	r
+DIM_SUFFIX	build/main.bundle.js	/^var DIM_SUFFIX = "dim";$/;"	r
+DOM_SUFFIX	build/main.bundle.js	/^var DOM_SUFFIX = "dom";$/;"	r
+FUNCTIONS_FOR_KEY	build/main.bundle.js	/^grammar_matrix.FUNCTIONS_FOR_KEY = FUNCTIONS_FOR_KEY;$/;"	r
+FUNCTIONS_FOR_KEY	build/main.bundle.js	/^var FUNCTIONS_FOR_KEY = {};$/;"	o
+GRAMMARS	build/main.bundle.js	/^    GRAMMARS = {};$/;"	o
+GRAMMARS	build/main.bundle.js	/^var GRAMMARS = {};$/;"	o
+IS	build/main.bundle.js	/^var IS = require("isnext");$/;"	r
+IS	build/main.bundle.js	/^window.IS = IS;$/;"	r
+IS	src/js/main.js	/^var IS = require("isnext");$/;"	r
+IS	src/js/main.js	/^window.IS = IS;$/;"	r
+Interval	build/main.bundle.js	/^function Interval(coord) {$/;"	f
+Interval	build/main.bundle.js	/^var Interval = require('.\/interval');$/;"	r
+Interval	build/main.bundle.js	/^var Interval = require('.\/lib\/interval');$/;"	r
+Item	build/main.bundle.js	/^function Item(fun, array) {$/;"	f
+KEYS_HAVE_CHORD	build/main.bundle.js	/^grammar_matrix.KEYS_HAVE_CHORD = KEYS_HAVE_CHORD;$/;"	r
+KEYS_HAVE_CHORD	build/main.bundle.js	/^var KEYS_HAVE_CHORD = {};$/;"	o
+KEYS_WITH_CHORD	build/main.bundle.js	/^grammar_matrix.KEYS_WITH_CHORD = KEYS_HAVE_CHORD;$/;"	r
+KNOWN_SCALES	build/main.bundle.js	/^Scale.KNOWN_SCALES = Object.keys(scales);$/;"	r
+LOOKUPS	build/main.bundle.js	/^var LOOKUPS = { };$/;"	o
+MAJOR_GRAMMAR	build/main.bundle.js	/^var MAJOR_GRAMMAR = "iii | vi | ii IV | V vii | I";$/;"	r
+MAJ_KEYS	build/main.bundle.js	/^var MAJ_KEYS = ["IV", "iii", "ii", "vii", "vi", "V", "I" ];$/;"	a
+MAJ_POINTS	build/main.bundle.js	/^var MAJ_POINTS = {$/;"	o
+MAJ_SUFFIX	build/main.bundle.js	/^var MAJ_SUFFIX = "M";$/;"	r
+MINOR_GRAMMAR	build/main.bundle.js	/^var MINOR_GRAMMAR = "III | VI vi | ii IV iv | v V vii | Im i";$/;"	r
+MIN_KEYS	build/main.bundle.js	/^var MIN_KEYS = ["vii", "Im", "ii", "III", "iv", "VI", "V" ];$/;"	a
+MIN_POINTS	build/main.bundle.js	/^var MIN_POINTS = {$/;"	o
+MIN_SUFFIX	build/main.bundle.js	/^var MIN_SUFFIX = "m";$/;"	r
+MIXTURES	build/main.bundle.js	/^var MIXTURES = {};$/;"	o
+Note	build/main.bundle.js	/^function Note(coord, duration) {$/;"	f
+Note	build/main.bundle.js	/^var Note = require('.\/lib\/note');$/;"	r
+Note	build/main.bundle.js	/^var Note = require('.\/note');$/;"	r
+Progression	build/main.bundle.js	/^var Progression = require(".\/progression");$/;"	r
+SYMBOLS	build/main.bundle.js	/^var SYMBOLS = {$/;"	o
+Scale	build/main.bundle.js	/^function Scale(tonic, scale) {$/;"	f
+Scale	build/main.bundle.js	/^var Scale = require('.\/lib\/scale');$/;"	r
+T	build/main.bundle.js	/^var T = require("tone");$/;"	r
+T	src/js/player.js	/^var T = require("tone");$/;"	r
+Tone	client/src/player.js	/^var Tone = require("tone");$/;"	r
+VERSION	build/main.bundle.js	/^  _.VERSION = '1.9.1';$/;"	r
+_	build/main.bundle.js	/^    exports._ = _;$/;"	r
+_	build/main.bundle.js	/^    root._ = _;$/;"	r
+_	build/main.bundle.js	/^    root._ = previousUnderscore;$/;"	r
+_	build/main.bundle.js	/^  var _ = function(obj) {$/;"	f
+_	build/main.bundle.js	/^var _ = require("underscore");$/;"	r
+_chain	build/main.bundle.js	/^    instance._chain = true;$/;"	r
+_voicing	build/main.bundle.js	/^    this._voicing = [];$/;"	a
+_voicing	build/main.bundle.js	/^    this._voicing = [bassInterval];$/;"	a
+_voicing	build/main.bundle.js	/^    this._voicing = this.intervals;$/;"	r
+_voicing	build/main.bundle.js	/^  this._voicing = [];$/;"	a
+_voicing	build/main.bundle.js	/^  this._voicing = this.intervals.slice();$/;"	r
+_wrapped	build/main.bundle.js	/^    this._wrapped = obj;$/;"	r
+acc	build/main.bundle.js	/^    acc = 0;$/;"	r
+accidental	build/main.bundle.js	/^  accidental: function() {$/;"	f
+accidentalValue	build/main.bundle.js	/^  accidentalValue: function() {$/;"	f
+accidentalValues	build/main.bundle.js	/^var accidentalValues = {$/;"	o
+accval	build/main.bundle.js	/^var accval = require('accidental-value');$/;"	r
+add	build/main.bundle.js	/^    add: function(key, inc) {$/;"	f
+add	build/main.bundle.js	/^  add: function(interval) {$/;"	f
+add	build/main.bundle.js	/^  add: function(note, interval) {$/;"	f
+addListener	build/main.bundle.js	/^process.addListener = noop;$/;"	r
+add_grammar	build/main.bundle.js	/^function add_grammar(name, grammar) {$/;"	f
+add_grammar_to_candidates	build/main.bundle.js	/^function add_grammar_to_candidates(candidates, func, grammar_matrix, grammar_classes) {$/;"	f
+additional	build/main.bundle.js	/^    additional = additional || '';$/;"	r
+after	build/main.bundle.js	/^  _.after = function(times, func) {$/;"	f
+allKeys	build/main.bundle.js	/^  _.allKeys = function(obj) {$/;"	f
+analysis	build/main.bundle.js	/^var analysis = require(".\/analysis");$/;"	r
+analysis	build/main.bundle.js	/^var analysis = require(".\/src\/analysis");$/;"	r
+applied_modulations	build/main.bundle.js	/^      progression.applied_modulations = {};$/;"	o
+args	build/main.bundle.js	/^      args = arguments;$/;"	r
+argv	build/main.bundle.js	/^process.argv = [];$/;"	a
+array	build/main.bundle.js	/^    this.array = array;$/;"	r
+base	build/main.bundle.js	/^  base: function() {$/;"	f
+baseCreate	build/main.bundle.js	/^  var baseCreate = function(prototype) {$/;"	f
+baseIntervals	build/main.bundle.js	/^var baseIntervals = [$/;"	a
+bass	build/main.bundle.js	/^    bass = bassInterval.simple();$/;"	r
+bass	build/main.bundle.js	/^    bass = null;$/;"	r
+bass	build/main.bundle.js	/^  bass: function() {$/;"	f
+bassInterval	build/main.bundle.js	/^    bassInterval = Interval.between(root, note);$/;"	r
+bassInterval	build/main.bundle.js	/^    bassInterval = bassInterval.invert().direction('down');$/;"	r
+before	build/main.bundle.js	/^  _.before = function(times, func) {$/;"	f
+between	build/main.bundle.js	/^Interval.between = function(from, to) {$/;"	f
+between	build/main.bundle.js	/^intervalConstructor.between = Interval.between;$/;"	r
+binding	build/main.bundle.js	/^process.binding = function (name) {$/;"	f
+bound	build/main.bundle.js	/^    var bound = function() {$/;"	f
+browser	build/main.bundle.js	/^process.browser = true;$/;"	r
+build_chords_for_key	build/main.bundle.js	/^function build_chords_for_key(key) {$/;"	f
+build_chords_in_keys	build/main.bundle.js	/^function build_chords_in_keys() {$/;"	f
+cache	build/main.bundle.js	/^    memoize.cache = {};$/;"	o
+cachedClearTimeout	build/main.bundle.js	/^            cachedClearTimeout = clearTimeout;$/;"	r
+cachedClearTimeout	build/main.bundle.js	/^            cachedClearTimeout = defaultClearTimeout;$/;"	r
+cachedClearTimeout	build/main.bundle.js	/^        cachedClearTimeout = clearTimeout;$/;"	r
+cachedClearTimeout	build/main.bundle.js	/^        cachedClearTimeout = defaultClearTimeout;$/;"	r
+cachedSetTimeout	build/main.bundle.js	/^            cachedSetTimeout = defaultSetTimout;$/;"	r
+cachedSetTimeout	build/main.bundle.js	/^            cachedSetTimeout = setTimeout;$/;"	r
+cachedSetTimeout	build/main.bundle.js	/^        cachedSetTimeout = defaultSetTimout;$/;"	r
+cachedSetTimeout	build/main.bundle.js	/^        cachedSetTimeout = setTimeout;$/;"	r
+cached_determineds	build/main.bundle.js	/^var cached_determineds = {};$/;"	o
+cached_grammar_checks	build/main.bundle.js	/^    cached_grammar_checks = {};$/;"	o
+cached_grammar_checks	build/main.bundle.js	/^var cached_grammar_checks = {};$/;"	o
+cached_harmoniousness	build/main.bundle.js	/^    cached_harmoniousness = {};$/;"	o
+cached_harmoniousness	build/main.bundle.js	/^var cached_harmoniousness = {};$/;"	o
+cached_intersections	build/main.bundle.js	/^var cached_intersections = {};$/;"	o
+cached_labelings	build/main.bundle.js	/^    cached_labelings = {};$/;"	o
+cached_labelings	build/main.bundle.js	/^var cached_labelings = {};$/;"	o
+cancel	build/main.bundle.js	/^    debounced.cancel = function() {$/;"	f
+cancel	build/main.bundle.js	/^    throttled.cancel = function() {$/;"	f
+cb	build/main.bundle.js	/^  var cb = function(value, context, argCount) {$/;"	f
+cents	build/main.bundle.js	/^  cents = 1200 * (Math.log(fq \/ originalFq) \/ Math.log(2));$/;"	r
+chain	build/main.bundle.js	/^  _.chain = function(obj) {$/;"	f
+chainResult	build/main.bundle.js	/^  var chainResult = function(instance, obj) {$/;"	f
+chdir	build/main.bundle.js	/^process.chdir = function (dir) {$/;"	f
+check_grammar	build/main.bundle.js	/^function check_grammar(prev_chord, chord, matrix) {$/;"	f
+check_progression_grammar	build/main.bundle.js	/^function check_progression_grammar(labeling) {$/;"	f
+checked_keys	build/main.bundle.js	/^  progression.checked_keys = {};$/;"	o
+chord	build/main.bundle.js	/^          chord = chord.replace(\/d$\/, "dim").replace(\/D$\/, "dom");$/;"	r
+chord	build/main.bundle.js	/^      chord = chord.replace(\/d$\/, "dim").replace(\/D$\/, "dom");$/;"	r
+chord	build/main.bundle.js	/^      chord = teoria.chord(chord);$/;"	r
+chord	build/main.bundle.js	/^    chord = chord.replace("M6", "").replace("7", "");$/;"	r
+chord	build/main.bundle.js	/^    chord = normal.get_normal_chord(chord.name || chord);$/;"	r
+chord	build/main.bundle.js	/^  Note.prototype.chord = function(chord) {$/;"	f
+chord	client/src/player.js	/^  chord = normal.get_normal_chord(chord.name || chord);$/;"	r
+chord	src/js/player.js	/^    chord = normal.get_normal_chord(chord.name || chord);$/;"	r
+chordConstructor	build/main.bundle.js	/^function chordConstructor(name, symbol) {$/;"	f
+chordLength	build/main.bundle.js	/^            chordLength = Math.max(3, chordLength);$/;"	r
+chordLength	build/main.bundle.js	/^            chordLength = intPos;$/;"	r
+chordLength	build/main.bundle.js	/^          chordLength = Math.max(3, chordLength);$/;"	r
+chordLength	build/main.bundle.js	/^        chordLength = (c - 1) \/ 2;$/;"	r
+chordLength	build/main.bundle.js	/^        chordLength = Math.max(3, chordLength);$/;"	r
+chordLength	build/main.bundle.js	/^    chordLength = intervals.length;$/;"	r
+chordType	build/main.bundle.js	/^  chordType: function() { \/\/ In need of better name$/;"	f
+chord_is_major	build/main.bundle.js	/^  chord_is_major: function(chord_ish) {$/;"	f
+chord_ish	build/main.bundle.js	/^      chord_ish = teoria.chord(chord_ish);$/;"	r
+chord_ish	build/main.bundle.js	/^    chord_ish = teoria.chord(chord_ish);$/;"	r
+chord_list	build/main.bundle.js	/^      chord_list = get_chords_from_str(chord_list);$/;"	r
+chord_list	build/main.bundle.js	/^      progression.chord_list = chord_list;$/;"	r
+chord_name	build/main.bundle.js	/^        chord_name = normal.get_chord_key(chord_name) + "#" + chord_quality;$/;"	r
+chord_name	build/main.bundle.js	/^        chord_name = normal.get_chord_key(chord_name) + "b" + chord_quality;$/;"	r
+chord_name	build/main.bundle.js	/^        chord_name = normal.get_chord_key(teoria.chord(chord_note.name())) + chord_quality;$/;"	r
+chord_name	build/main.bundle.js	/^        chord_name = normal.get_flavored_key(chord_name, quality || "M");$/;"	r
+chord_name	build/main.bundle.js	/^        chord_name = normal.get_flavored_key(chord_name, quality || "m");$/;"	r
+chord_name	build/main.bundle.js	/^      chord_name = chord_name.replace(\/#b\/, '');$/;"	r
+chord_name	build/main.bundle.js	/^      chord_name = normal.get_flavored_key(chord_name, quality);$/;"	r
+chord_quality	build/main.bundle.js	/^        chord_quality = "m";$/;"	r
+chord_quality	build/main.bundle.js	/^      chord_quality = "m";$/;"	r
+chroma	build/main.bundle.js	/^  chroma: function() {$/;"	f
+chunk	build/main.bundle.js	/^  _.chunk = function(array, count) {$/;"	f
+cleanUpNextTick	build/main.bundle.js	/^function cleanUpNextTick() {$/;"	f
+clone	build/main.bundle.js	/^  _.clone = function(obj) {$/;"	f
+collectNonEnumProps	build/main.bundle.js	/^  var collectNonEnumProps = function(obj, keys) {$/;"	f
+compact	build/main.bundle.js	/^  _.compact = function(array) {$/;"	f
+compare_likeliness	build/main.bundle.js	/^function compare_likeliness(a, b) {$/;"	f
+compose	build/main.bundle.js	/^  _.compose = function() {$/;"	f
+computed	build/main.bundle.js	/^          computed = iteratee ? iteratee(value, i, array) : value;$/;"	r
+computed	build/main.bundle.js	/^        computed = iteratee(v, index, list);$/;"	r
+concertPitch	build/main.bundle.js	/^  concertPitch = concertPitch || 440;$/;"	r
+constant	build/main.bundle.js	/^  _.constant = function(value) {$/;"	f
+context	build/main.bundle.js	/^          context = deepGet(context, contextPath);$/;"	r
+context	build/main.bundle.js	/^      context = iteratee;$/;"	r
+context	build/main.bundle.js	/^      context = this;$/;"	r
+contextPath	build/main.bundle.js	/^      contextPath = path.slice(0, -1);$/;"	r
+coord	build/main.bundle.js	/^        note.coord = vector.add(note.coord, product);$/;"	r
+coord	build/main.bundle.js	/^        this.coord = vector.mul(this.coord, -1);$/;"	r
+coord	build/main.bundle.js	/^    coord = vector.add(coord, vector.mul(knowledge.sharp, acc));$/;"	r
+coord	build/main.bundle.js	/^    this.coord = vector.add(this.coord, interval.coord);$/;"	r
+coord	build/main.bundle.js	/^  this.coord = coord;$/;"	r
+coords	build/main.bundle.js	/^module.exports.coords = baseIntervals.slice(0);$/;"	r
+coords	build/main.bundle.js	/^var coords = require('notecoord');$/;"	r
+count	build/main.bundle.js	/^      count = (count >= 0) ? Math.floor(count) : -(Math.ceil(-count));$/;"	r
+count	build/main.bundle.js	/^      count = (this.key(true) - scale.tonic.key(true)) \/ 7;$/;"	r
+create	build/main.bundle.js	/^  _.create = function(prototype, props) {$/;"	f
+createAssigner	build/main.bundle.js	/^  var createAssigner = function(keysFunc, defaults) {$/;"	f
+createEscaper	build/main.bundle.js	/^  var createEscaper = function(map) {$/;"	f
+createIndexFinder	build/main.bundle.js	/^  var createIndexFinder = function(dir, predicateFind, sortedIndex) {$/;"	f
+createPredicateIndexFinder	build/main.bundle.js	/^  var createPredicateIndexFinder = function(dir) {$/;"	f
+createReduce	build/main.bundle.js	/^  var createReduce = function(dir) {$/;"	f
+currentQueue	build/main.bundle.js	/^        currentQueue = queue;$/;"	r
+currentQueue	build/main.bundle.js	/^    currentQueue = null;$/;"	r
+cwd	build/main.bundle.js	/^process.cwd = function () { return '\/' };$/;"	f
+daccord	build/main.bundle.js	/^var daccord = require('daccord');$/;"	r
+debounce	build/main.bundle.js	/^  _.debounce = function(func, wait, immediate) {$/;"	f
+debug_log	build/main.bundle.js	/^var debug_log = function() {$/;"	f
+debug_log	build/main.bundle.js	/^var debug_log = require(".\/debuglog");$/;"	r
+decide_progression_likeliness	build/main.bundle.js	/^function decide_progression_likeliness(labeling) {$/;"	f
+deepEq	build/main.bundle.js	/^  deepEq = function(a, b, aStack, bStack) {$/;"	f
+deepGet	build/main.bundle.js	/^  var deepGet = function(obj, path) {$/;"	f
+defaultClearTimeout	build/main.bundle.js	/^function defaultClearTimeout () {$/;"	f
+defaultSetTimout	build/main.bundle.js	/^function defaultSetTimout() {$/;"	f
+defaults	build/main.bundle.js	/^  _.defaults = createAssigner(_.allKeys, true);$/;"	r
+defer	build/main.bundle.js	/^  _.defer = _.partial(_.delay, _, 1);$/;"	r
+delta	build/main.bundle.js	/^        delta = -1;$/;"	r
+desired_quality	build/main.bundle.js	/^      desired_quality = "M";$/;"	r
+desired_quality	build/main.bundle.js	/^      desired_quality = "m";$/;"	r
+determine_function	build/main.bundle.js	/^  determine_function: function(chord, root) {   $/;"	f
+direction	build/main.bundle.js	/^  direction: function(dir) {$/;"	f
+dom	build/main.bundle.js	/^      dom = true;$/;"	r
+dominant	build/main.bundle.js	/^  dominant: function(additional) {$/;"	f
+double	build/main.bundle.js	/^MIXTURES.double = {$/;"	o
+drainQueue	build/main.bundle.js	/^function drainQueue() {$/;"	f
+draining	build/main.bundle.js	/^    draining = false;$/;"	r
+draining	build/main.bundle.js	/^    draining = true;$/;"	r
+draining	build/main.bundle.js	/^var draining = false;$/;"	r
+duration	build/main.bundle.js	/^    duration = duration || 1000;$/;"	r
+duration	build/main.bundle.js	/^  this.duration = { value: duration.value || 4, dots: duration.dots || 0 };$/;"	o
+duration	client/src/player.js	/^  duration = duration || "4n"$/;"	r
+duration	src/js/player.js	/^    duration = duration || 1000;$/;"	r
+durationInSeconds	build/main.bundle.js	/^  durationInSeconds: function(bpm, beatUnit) {$/;"	f
+durationName	build/main.bundle.js	/^  durationName: function() {$/;"	f
+emit	build/main.bundle.js	/^process.emit = noop;$/;"	r
+enharmonics	build/main.bundle.js	/^  enharmonics: function(oneaccidental) {$/;"	f
+env	build/main.bundle.js	/^process.env = {};$/;"	o
+eq	build/main.bundle.js	/^  eq = function(a, b, aStack, bStack) {$/;"	f
+equal	build/main.bundle.js	/^  equal: function(interval) {$/;"	f
+escape	build/main.bundle.js	/^  _.escape = createEscaper(escapeMap);$/;"	r
+escapeChar	build/main.bundle.js	/^  var escapeChar = function(match) {$/;"	f
+escaper	build/main.bundle.js	/^    var escaper = function(match) {$/;"	f
+executeBound	build/main.bundle.js	/^  var executeBound = function(sourceFunc, boundFunc, context, callingContext, args) {$/;"	f
+explicitMajor	build/main.bundle.js	/^        explicitMajor = true;$/;"	r
+exports	build/main.bundle.js	/^      exports = module.exports = _;$/;"	r
+exports	build/main.bundle.js	/^exports = module.exports = teoria;$/;"	r
+exports	build/main.bundle.js	/^module.exports = Chord;$/;"	r
+exports	build/main.bundle.js	/^module.exports = Interval;$/;"	r
+exports	build/main.bundle.js	/^module.exports = Note;$/;"	r
+exports	build/main.bundle.js	/^module.exports = Scale;$/;"	r
+exports	build/main.bundle.js	/^module.exports = debug_log;$/;"	r
+exports	build/main.bundle.js	/^module.exports = function accidentalNumber(acc) {$/;"	f
+exports	build/main.bundle.js	/^module.exports = function helmholtz(name) {$/;"	f
+exports	build/main.bundle.js	/^module.exports = function scientific(name) {$/;"	f
+exports	build/main.bundle.js	/^module.exports = function(coord, stdPitch) {$/;"	f
+exports	build/main.bundle.js	/^module.exports = function(name) {$/;"	f
+exports	build/main.bundle.js	/^module.exports = function(simple) {$/;"	f
+exports	build/main.bundle.js	/^module.exports = function(symbol) {$/;"	f
+exports	build/main.bundle.js	/^module.exports = function(teoria) {$/;"	f
+exports	build/main.bundle.js	/^module.exports = {$/;"	o
+exports	client/babel.config.js	/^module.exports = {$/;"	o
+exports	src/js/player.js	/^module.exports = {$/;"	o
+extend	build/main.bundle.js	/^  _.extend = createAssigner(_.allKeys);$/;"	r
+extendOwn	build/main.bundle.js	/^  _.extendOwn = _.assign = createAssigner(_.keys);$/;"	r
+fifth	build/main.bundle.js	/^      fifth = (fifth.direction === 'down') ? fifth.invert() : fifth;$/;"	r
+fifth	build/main.bundle.js	/^      fifth = fifth.simple().toString();$/;"	r
+fifth	build/main.bundle.js	/^    fifth = fifth < 0 ? knowledge.intervalFromFifth.length + fifth : fifth;$/;"	r
+fifth	build/main.bundle.js	/^    fifth = this.value() > 0 ? fifth + 5 : -(fifth - 5) % 7;$/;"	r
+findIndex	build/main.bundle.js	/^  _.findIndex = createPredicateIndexFinder(1);$/;"	r
+findKey	build/main.bundle.js	/^  _.findKey = function(obj, predicate, context) {$/;"	f
+findLastIndex	build/main.bundle.js	/^  _.findLastIndex = createPredicateIndexFinder(-1);$/;"	r
+findWhere	build/main.bundle.js	/^  _.findWhere = function(obj, attrs) {$/;"	f
+find_mixtures	build/main.bundle.js	/^function find_mixtures(labeling) {$/;"	f
+find_modulation_candidates	build/main.bundle.js	/^function find_modulation_candidates(progression) {$/;"	f
+flamenco	build/main.bundle.js	/^scales.flamenco = scales.doubleharmonic;$/;"	r
+flat	build/main.bundle.js	/^          flat = true;$/;"	r
+flatten	build/main.bundle.js	/^  _.flatten = function(array, shallow) {$/;"	f
+flatten	build/main.bundle.js	/^  var flatten = function(input, shallow, strict, output) {$/;"	f
+flavor	build/main.bundle.js	/^        flavor = AUG_SUFFIX;$/;"	r
+flavor	build/main.bundle.js	/^        flavor = DIM_SUFFIX;$/;"	r
+flavor	build/main.bundle.js	/^        flavor = DOM_SUFFIX;$/;"	r
+flavor	build/main.bundle.js	/^        flavor = MIN_SUFFIX;$/;"	r
+flavor	build/main.bundle.js	/^      flavor = MAJ_SUFFIX;$/;"	r
+flavor	build/main.bundle.js	/^  flavor = flavor || "M";$/;"	r
+fq	build/main.bundle.js	/^  fq: function(concertPitch) {$/;"	f
+from	build/main.bundle.js	/^Interval.from = function(from, to) {$/;"	f
+from	build/main.bundle.js	/^intervalConstructor.from = Interval.from;$/;"	r
+fromFrequency	build/main.bundle.js	/^Note.fromFrequency = function(fq, concertPitch) {$/;"	f
+fromFrequency	build/main.bundle.js	/^noteConstructor.fromFrequency = Note.fromFrequency;$/;"	r
+fromKey	build/main.bundle.js	/^Note.fromKey = function(key) {$/;"	f
+fromKey	build/main.bundle.js	/^noteConstructor.fromKey = Note.fromKey;$/;"	r
+fromMIDI	build/main.bundle.js	/^Note.fromMIDI = function(note) {$/;"	f
+fromMIDI	build/main.bundle.js	/^noteConstructor.fromMIDI = Note.fromMIDI;$/;"	r
+fromString	build/main.bundle.js	/^Note.fromString = function(name, dur) {$/;"	f
+fromString	build/main.bundle.js	/^noteConstructor.fromString = Note.fromString;$/;"	r
+fun	build/main.bundle.js	/^    this.fun = fun;$/;"	r
+func	build/main.bundle.js	/^      func = func.replace(\/#\/, '');$/;"	r
+func	build/main.bundle.js	/^      func = func.replace(\/7\/, "");$/;"	r
+func	build/main.bundle.js	/^      func = func.replace(\/b\/, '');$/;"	r
+func	build/main.bundle.js	/^      func = func.toLowerCase();$/;"	r
+func	build/main.bundle.js	/^      func = func.toUpperCase();$/;"	r
+func	build/main.bundle.js	/^      func = path;$/;"	r
+generator	build/main.bundle.js	/^var generator = require(".\/src\/generator");$/;"	r
+get	build/main.bundle.js	/^  get: function(i) {$/;"	f
+get	build/main.bundle.js	/^  get: function(interval) {$/;"	f
+get_chord	client/src/player.js	/^function get_chord(chord) {$/;"	f
+get_chord_for_function	build/main.bundle.js	/^  get_chord_for_function: function(func, root) {$/;"	f
+get_chord_histograms	build/main.bundle.js	/^  get_chord_histograms: function(progression) {$/;"	f
+get_chord_key	build/main.bundle.js	/^  get_chord_key: function(chord_ish) {$/;"	f
+get_chord_names	build/main.bundle.js	/^function get_chord_names(intersected, mod_key) {$/;"	f
+get_chords_from_str	build/main.bundle.js	/^function get_chords_from_str(str) {$/;"	f
+get_common_chord_modulations	build/main.bundle.js	/^function get_common_chord_modulations(progression) {$/;"	f
+get_flavored_key	build/main.bundle.js	/^function get_flavored_key(chord_ish, flavor) {$/;"	f
+get_hists	build/main.bundle.js	/^    function get_hists(chord_list) {$/;"	f
+get_intersection	build/main.bundle.js	/^function get_intersection(chord_key, current_key, mod_key) {$/;"	f
+get_normal_chord	build/main.bundle.js	/^  get_normal_chord: function(chord, current_key) {$/;"	f
+get_possible_modulations	build/main.bundle.js	/^  get_possible_modulations: function(progression) {$/;"	f
+get_possible_variations	build/main.bundle.js	/^    get_possible_variations: function(progression) {$/;"	f
+get_potential	build/main.bundle.js	/^  function get_potential(key) {$/;"	f
+get_progression_breaks	build/main.bundle.js	/^function get_progression_breaks(labeling) {$/;"	f
+get_progression_candidate_chords	build/main.bundle.js	/^function get_progression_candidate_chords(chord, key) {$/;"	f
+get_progression_candidates	build/main.bundle.js	/^function get_progression_candidates(chord, key) {$/;"	f
+get_progression_harmoniousness	build/main.bundle.js	/^function get_progression_harmoniousness(labeling) {$/;"	f
+get_relative_modulations	build/main.bundle.js	/^function get_relative_modulations(progression) {$/;"	f
+get_simple_key	build/main.bundle.js	/^function get_simple_key(chord_ish) {$/;"	f
+get_variations	build/main.bundle.js	/^  get_variations: function(progression) {$/;"	f
+grammar	build/main.bundle.js	/^var grammar = require(".\/grammar");$/;"	r
+grammar	build/main.bundle.js	/^var grammar = require(".\/grammar_matrix");$/;"	r
+grammar_matrix	build/main.bundle.js	/^var grammar_matrix = require(".\/grammar_matrix");$/;"	r
+greater	build/main.bundle.js	/^  greater: function(interval) {$/;"	f
+group	build/main.bundle.js	/^  var group = function(behavior, partition) {$/;"	f
+guess_progression_labelings	build/main.bundle.js	/^  guess_progression_labelings: function(chord_list) {$/;"	f
+harmonicchromatic	build/main.bundle.js	/^scales.harmonicchromatic = scales.chromatic;$/;"	r
+has	build/main.bundle.js	/^      has = {unison: false, third: false, fifth: false, seventh: false};$/;"	o
+has	build/main.bundle.js	/^      has = {unison: false, third: false, fifth: false};$/;"	o
+has	build/main.bundle.js	/^  _.has = function(obj, path) {$/;"	f
+has	build/main.bundle.js	/^  var has = function(obj, path) {$/;"	f
+hasOwnProperty	build/main.bundle.js	/^      hasOwnProperty = ObjProto.hasOwnProperty;$/;"	r
+helmholtz	build/main.bundle.js	/^  helmholtz: function() {$/;"	f
+helmholtz	build/main.bundle.js	/^var helmholtz = require('helmholtz');$/;"	r
+i	build/main.bundle.js	/^          i = idx >= 0 ? idx : Math.max(idx + length, i);$/;"	r
+i	build/main.bundle.js	/^        i = length; \/\/ Ensure we don't continue iterating.$/;"	r
+identity	build/main.bundle.js	/^  _.identity = function(value) {$/;"	f
+idx	build/main.bundle.js	/^          idx = output.length;$/;"	r
+idx	build/main.bundle.js	/^        idx = predicateFind(slice.call(array, i, length), _.isNaN);$/;"	r
+idx	build/main.bundle.js	/^        idx = sortedIndex(array, item);$/;"	r
+ignore	build/main.bundle.js	/^            ignore = true;$/;"	r
+ignore	build/main.bundle.js	/^          ignore = true$/;"	r
+inc	build/main.bundle.js	/^      inc = inc || 1;$/;"	r
+index	build/main.bundle.js	/^          index = 0;$/;"	r
+index	build/main.bundle.js	/^          index = dir > 0 ? 0 : length - 1;$/;"	r
+index	build/main.bundle.js	/^      index = offset + match.length;$/;"	r
+indexOf	build/main.bundle.js	/^  _.indexOf = createIndexFinder(1, _.findIndex, _.sortedIndex);$/;"	r
+initial	build/main.bundle.js	/^  _.initial = function(array, n, guard) {$/;"	f
+intPos	build/main.bundle.js	/^          intPos = (token - 1) \/ 2;$/;"	r
+inter	build/main.bundle.js	/^      inter = inter.invert();$/;"	r
+inter	build/main.bundle.js	/^    inter = inter.simple(true).coord;$/;"	r
+intersected	build/main.bundle.js	/^  intersected = _.uniq(candidates);$/;"	r
+intersection	build/main.bundle.js	/^  _.intersection = function(array) {$/;"	f
+interval	build/main.bundle.js	/^      interval = interval.invert();$/;"	r
+interval	build/main.bundle.js	/^    interval = (typeof interval === 'string') ?$/;"	r
+interval	build/main.bundle.js	/^  interval: function(interval) {$/;"	f
+interval	build/main.bundle.js	/^module.exports.interval = function accidentalInterval(acc) {$/;"	f
+intervalConstructor	build/main.bundle.js	/^function intervalConstructor(from, to) {$/;"	f
+intervals	build/main.bundle.js	/^  this.intervals = [];$/;"	a
+intervals	build/main.bundle.js	/^  this.intervals = daccord(name).map(Interval.toCoord);$/;"	r
+invert	build/main.bundle.js	/^        invert = interval.invert();$/;"	r
+invert	build/main.bundle.js	/^  _.invert = function(obj) {$/;"	f
+invert	build/main.bundle.js	/^  invert: function() {$/;"	f
+invert	build/main.bundle.js	/^Interval.invert = function(sInterval) {$/;"	f
+invert	build/main.bundle.js	/^intervalConstructor.invert = Interval.invert;$/;"	r
+isArguments	build/main.bundle.js	/^    _.isArguments = function(obj) {$/;"	f
+isArrayLike	build/main.bundle.js	/^  var isArrayLike = function(collection) {$/;"	f
+isBoolean	build/main.bundle.js	/^  _.isBoolean = function(obj) {$/;"	f
+isCompound	build/main.bundle.js	/^  isCompound: function() {$/;"	f
+isElement	build/main.bundle.js	/^  _.isElement = function(obj) {$/;"	f
+isEmpty	build/main.bundle.js	/^  _.isEmpty = function(obj) {$/;"	f
+isEqual	build/main.bundle.js	/^  _.isEqual = function(a, b) {$/;"	f
+isFinite	build/main.bundle.js	/^  _.isFinite = function(obj) {$/;"	f
+isFunction	build/main.bundle.js	/^    _.isFunction = function(obj) {$/;"	f
+isMatch	build/main.bundle.js	/^  _.isMatch = function(object, attrs) {$/;"	f
+isNaN	build/main.bundle.js	/^  _.isNaN = function(obj) {$/;"	f
+isNull	build/main.bundle.js	/^  _.isNull = function(obj) {$/;"	f
+isObject	build/main.bundle.js	/^  _.isObject = function(obj) {$/;"	f
+isSorted	build/main.bundle.js	/^      isSorted = false;$/;"	r
+isUndefined	build/main.bundle.js	/^  _.isUndefined = function(obj) {$/;"	f
+is_mixture	build/main.bundle.js	/^  is_mixture: function(label) {$/;"	f
+iteratee	build/main.bundle.js	/^      iteratee = _.negate(iteratee);$/;"	r
+iteratee	build/main.bundle.js	/^      iteratee = cb(iteratee, context);$/;"	r
+iteratee	build/main.bundle.js	/^      iteratee = function(value, key) {$/;"	f
+iteratee	build/main.bundle.js	/^      iteratee = isSorted;$/;"	r
+iteratee	build/main.bundle.js	/^      iteratee = keyInObj;$/;"	r
+iteratee	build/main.bundle.js	/^    iteratee = cb(iteratee, context);$/;"	r
+iteratee	build/main.bundle.js	/^    iteratee = cb(iteratee, context, 1);$/;"	r
+iteratee	build/main.bundle.js	/^    iteratee = optimizeCb(iteratee, context);$/;"	r
+iteratee	build/main.bundle.js	/^    iteratee = optimizeCb(iteratee, context, 1);$/;"	r
+key	build/main.bundle.js	/^      progression.key = key;$/;"	r
+key	build/main.bundle.js	/^  key = 49 + 12 * ((Math.log(fq) - Math.log(concertPitch)) \/ Math.log(2));$/;"	r
+key	build/main.bundle.js	/^  key = Math.round(key);$/;"	r
+key	build/main.bundle.js	/^  key: function(white) {$/;"	f
+keyInObj	build/main.bundle.js	/^  var keyInObj = function(value, key, obj) {$/;"	f
+keys	build/main.bundle.js	/^            keys = keysFunc(source),$/;"	r
+keys	build/main.bundle.js	/^      keys = _.allKeys(obj);$/;"	r
+keys	build/main.bundle.js	/^      keys = _.map(flatten(keys, false, false), String);$/;"	r
+keys	build/main.bundle.js	/^      keys = flatten(keys, false, false);$/;"	r
+keys	build/main.bundle.js	/^    keys = flatten(keys, false, false);$/;"	r
+keys	build/main.bundle.js	/^  _.keys = function(obj) {$/;"	f
+keys_with_chords	build/main.bundle.js	/^          keys_with_chords = _.extend(keys_with_chords, other_keys_with_chords);$/;"	r
+keys_with_chords	build/main.bundle.js	/^          keys_with_chords = other_keys_with_chords;$/;"	r
+knowledge	build/main.bundle.js	/^var knowledge = require('.\/knowledge');$/;"	r
+l	build/main.bundle.js	/^            l = keys.length;$/;"	r
+label_progression	build/main.bundle.js	/^  label_progression: function(chord_list, root) {$/;"	f
+label_progression	build/main.bundle.js	/^  label_progression: function(chords) {$/;"	f
+labeling	build/main.bundle.js	/^      progression.labeling = labeling;$/;"	r
+labeling	build/main.bundle.js	/^  labeling = mixtures.replace(labeling);$/;"	r
+last	build/main.bundle.js	/^  _.last = function(array, n, guard) {$/;"	f
+lastComputed	build/main.bundle.js	/^          lastComputed = computed;$/;"	r
+lastIndexOf	build/main.bundle.js	/^  _.lastIndexOf = createIndexFinder(-1, _.findLastIndex);$/;"	r
+later	build/main.bundle.js	/^    var later = function() {$/;"	f
+later	build/main.bundle.js	/^    var later = function(context, args) {$/;"	f
+len	build/main.bundle.js	/^        len = queue.length;$/;"	r
+length	build/main.bundle.js	/^          length = (keys || obj).length,$/;"	r
+length	build/main.bundle.js	/^          length = idx >= 0 ? Math.min(idx + 1, length) : idx + length + 1;$/;"	r
+length	build/main.bundle.js	/^        length = (keys || obj).length,$/;"	r
+length	build/main.bundle.js	/^        length = (keys || obj).length;$/;"	r
+length	build/main.bundle.js	/^        length = keys.length,$/;"	r
+length	build/main.bundle.js	/^      length = a.length;$/;"	r
+length	build/main.bundle.js	/^      length = keys.length;$/;"	r
+likeliness	build/main.bundle.js	/^      p.likeliness = module.exports.decide_progression_likeliness(p.labeling);$/;"	r
+likeliness	build/main.bundle.js	/^      p.likeliness = module.exports.decide_progression_likeliness(p.labeling.slice(0, 8));$/;"	r
+likeliness_cache	build/main.bundle.js	/^var likeliness_cache = {};$/;"	o
+listeners	build/main.bundle.js	/^process.listeners = function (name) { return [] }$/;"	f
+lookup	build/main.bundle.js	/^var lookup = {$/;"	o
+loop	client/src/player.js	/^    chordPart.loop = false;$/;"	r
+mAlts	build/main.bundle.js	/^var mAlts = ['dd', 'd', 'm', 'M', 'A', 'AA'];$/;"	a
+main	build/main.bundle.js	/^  main: function(chords) {$/;"	f
+major	build/main.bundle.js	/^    major = true;$/;"	r
+major	build/main.bundle.js	/^scales.major = scales.ionian;$/;"	r
+major_progression	build/main.bundle.js	/^var major_progression = [ "I", "ii", "iii", "IV", "V", "vi", "vii" ];$/;"	a
+mapObject	build/main.bundle.js	/^  _.mapObject = function(obj, iteratee, context) {$/;"	f
+max	build/main.bundle.js	/^      max = min;$/;"	r
+max	build/main.bundle.js	/^  _.max = function(obj, iteratee, context) {$/;"	f
+memo	build/main.bundle.js	/^        memo = func.apply(this, arguments);$/;"	r
+memoize	build/main.bundle.js	/^    var memoize = function(key) {$/;"	f
+memoize	build/main.bundle.js	/^  _.memoize = function(func, hasher) {$/;"	f
+midi	build/main.bundle.js	/^  midi: function() {$/;"	f
+min	build/main.bundle.js	/^      min = 0;$/;"	r
+min	build/main.bundle.js	/^  _.min = function(obj, iteratee, context) {$/;"	f
+minor	build/main.bundle.js	/^scales.minor = scales.aeolian;$/;"	r
+minor_progression	build/main.bundle.js	/^var minor_progression = [ "Im", "ii", "III", "iv", "V", "VI", "vii" ];$/;"	a
+minor_progression	build/main.bundle.js	/^var minor_progression = [ "Im", "ii", "iii", "iv", "V", "VI", "vii" ];$/;"	a
+miss	build/main.bundle.js	/^          miss = false;$/;"	r
+mixin	build/main.bundle.js	/^  _.mixin = function(obj) {$/;"	f
+mixtures	build/main.bundle.js	/^var mixtures = require(".\/mixtures");$/;"	r
+mod_labeling	build/main.bundle.js	/^      progression.mod_labeling = _.clone(progression.labeling);$/;"	r
+mod_likeliness	build/main.bundle.js	/^      p.mod_likeliness = module.exports.decide_progression_likeliness(p.mod_labeling);$/;"	r
+modulations	build/main.bundle.js	/^      progression.modulations = modulations;$/;"	r
+mul	build/main.bundle.js	/^  mul: function(note, interval) {$/;"	f
+n	build/main.bundle.js	/^    n = Math.max(Math.min(n, length), 0);$/;"	r
+name	build/main.bundle.js	/^        name = '';$/;"	r
+name	build/main.bundle.js	/^        name = 'tetrad';$/;"	r
+name	build/main.bundle.js	/^        name = c;$/;"	r
+name	build/main.bundle.js	/^        name = sub2;$/;"	r
+name	build/main.bundle.js	/^        name = sub3;$/;"	r
+name	build/main.bundle.js	/^      name = 'octave';$/;"	r
+name	build/main.bundle.js	/^      name = (has.unison && has.third && has.fifth) ? 'triad' : 'trichord';$/;"	r
+name	build/main.bundle.js	/^    name = octave < 3 ? name.toUpperCase() : name.toLowerCase();$/;"	r
+name	build/main.bundle.js	/^    this.name = this.root.name().toUpperCase() +$/;"	r
+name	build/main.bundle.js	/^  name = name || '';$/;"	r
+name	build/main.bundle.js	/^  name: function() {$/;"	f
+name	build/main.bundle.js	/^  this.name = root.name().toUpperCase() + root.accidental() + name;$/;"	r
+name	build/main.bundle.js	/^  this.name = scaleName;$/;"	r
+nativeCreate	build/main.bundle.js	/^      nativeCreate = Object.create;$/;"	r
+nativeKeys	build/main.bundle.js	/^      nativeKeys = Object.keys,$/;"	r
+negate	build/main.bundle.js	/^  _.negate = function(predicate) {$/;"	f
+nextTick	build/main.bundle.js	/^process.nextTick = function (fun) {$/;"	f
+noConflict	build/main.bundle.js	/^  _.noConflict = function() {$/;"	f
+noop	build/main.bundle.js	/^  _.noop = function(){};$/;"	f
+noop	build/main.bundle.js	/^function noop() {}$/;"	f
+normal	build/main.bundle.js	/^var normal = require(".\/normal");$/;"	r
+normal	build/main.bundle.js	/^var normal = require(".\/src\/normal");$/;"	r
+normal	build/main.bundle.js	/^var normal = require("isnext").normal;$/;"	r
+normal	client/src/player.js	/^var normal = require("isnext").normal;$/;"	r
+normal	src/js/player.js	/^var normal = require("isnext").normal;$/;"	r
+normalize_chord_list	build/main.bundle.js	/^  normalize_chord_list: function(chord_list, root) {$/;"	f
+note	build/main.bundle.js	/^    note = Note.fromString(bass + (root.octave() + 1)); \/\/ crude$/;"	r
+noteConstructor	build/main.bundle.js	/^function noteConstructor(name, duration) {$/;"	f
+notes	build/main.bundle.js	/^  notes: function() {$/;"	f
+notes	build/main.bundle.js	/^module.exports.notes = notes;$/;"	r
+notes	build/main.bundle.js	/^var notes = {$/;"	o
+number	build/main.bundle.js	/^  number = sign < 0 ? -number : number;$/;"	r
+number	build/main.bundle.js	/^  number: function() {$/;"	f
+obj	build/main.bundle.js	/^      obj = Object(obj);$/;"	r
+obj	build/main.bundle.js	/^      obj = _.isFunction(prop) ? prop.call(obj) : prop;$/;"	r
+obj	build/main.bundle.js	/^      obj = isArrayLike(obj) ? obj : _.values(obj);$/;"	r
+object	build/main.bundle.js	/^  _.object = function(list, values) {$/;"	f
+octave	build/main.bundle.js	/^      octave = 2 - octaveLast.length;$/;"	r
+octave	build/main.bundle.js	/^      octave = 3 + octaveLast.length;$/;"	r
+octave	build/main.bundle.js	/^      octave = typeof symbol === 'number' ? symbol.toString(10) : '4';$/;"	r
+octave	build/main.bundle.js	/^    octave = 2 - octaveFirst.length;$/;"	r
+octave	build/main.bundle.js	/^    octave = lower ? 3 : 2;$/;"	r
+octave	build/main.bundle.js	/^  octave: function() {$/;"	f
+octaves	build/main.bundle.js	/^      octaves = (i \/ len) - 1;$/;"	r
+octaves	build/main.bundle.js	/^      octaves = Math.floor((i - 1) \/ len);$/;"	r
+octaves	build/main.bundle.js	/^      octaves = Math.floor(i \/ len);$/;"	r
+octaves	build/main.bundle.js	/^  octaves: function() {$/;"	f
+off	build/main.bundle.js	/^process.off = noop;$/;"	r
+on	build/main.bundle.js	/^process.on = noop;$/;"	r
+once	build/main.bundle.js	/^  _.once = _.partial(_.before, 2);$/;"	r
+once	build/main.bundle.js	/^process.once = noop;$/;"	r
+optimizeCb	build/main.bundle.js	/^  var optimizeCb = function(func, context, argCount) {$/;"	f
+original	build/main.bundle.js	/^LOOKUPS.original = {};$/;"	o
+originalFq	build/main.bundle.js	/^  originalFq = concertPitch * Math.pow(2, (key - 49) \/ 12);$/;"	r
+pAlts	build/main.bundle.js	/^var pAlts = ['dd', 'd', 'P', 'A', 'AA'];$/;"	a
+pad	build/main.bundle.js	/^function pad(str, ch, len) {$/;"	f
+pairs	build/main.bundle.js	/^  _.pairs = function(obj) {$/;"	f
+parallel	build/main.bundle.js	/^  parallel: function(additional) {$/;"	f
+parsing	build/main.bundle.js	/^      parsing = 'alterations';$/;"	r
+parsing	build/main.bundle.js	/^      parsing = 'ended';$/;"	r
+parsing	build/main.bundle.js	/^      parsing = 'extension';$/;"	r
+pitchFq	build/main.bundle.js	/^var pitchFq = require('pitch-fq');$/;"	r
+placeholder	build/main.bundle.js	/^  _.partial.placeholder = _;$/;"	r
+play_chord	build/main.bundle.js	/^  play_chord: function(chord, duration) {$/;"	f
+play_chord	build/main.bundle.js	/^window.play_chord = module.exports.play_chord;$/;"	r
+play_chord	src/js/player.js	/^  play_chord: function(chord, duration) {$/;"	f
+play_chord	src/js/player.js	/^window.play_chord = module.exports.play_chord;$/;"	r
+pluck	build/main.bundle.js	/^  _.pluck = function(obj, key) {$/;"	f
+polySynth	build/main.bundle.js	/^var polySynth = new T.PolySynth(4, T.Synth).toMaster();$/;"	r
+polySynth	client/src/player.js	/^var polySynth = new Tone.PolySynth(4, Tone.Synth).toMaster();$/;"	r
+polySynth	src/js/player.js	/^var polySynth = new T.PolySynth(4, T.Synth).toMaster();$/;"	r
+predicate	build/main.bundle.js	/^      predicate = cb(predicate, context);$/;"	r
+predicate	build/main.bundle.js	/^    predicate = cb(predicate, context);$/;"	r
+prependListener	build/main.bundle.js	/^process.prependListener = noop;$/;"	r
+prependOnceListener	build/main.bundle.js	/^process.prependOnceListener = noop;$/;"	r
+prev_chord	build/main.bundle.js	/^    prev_chord = chord;$/;"	r
+previous	build/main.bundle.js	/^        previous = now;$/;"	r
+previous	build/main.bundle.js	/^      previous = 0;$/;"	r
+previous	build/main.bundle.js	/^      previous = options.leading === false ? 0 : _.now();$/;"	r
+productionTip	client/src/main.js	/^Vue.config.productionTip = false;$/;"	r
+prog_name	build/main.bundle.js	/^      prog_name = "#" + prog_name;$/;"	r
+prog_name	build/main.bundle.js	/^      prog_name = "b" + prog_name;$/;"	r
+prog_name	build/main.bundle.js	/^      prog_name = "bb" + prog_name;$/;"	r
+progression	build/main.bundle.js	/^var progression = require(".\/src\/progression");$/;"	r
+progressions	build/main.bundle.js	/^    progressions = progressions.slice(0, 5);$/;"	r
+prop	build/main.bundle.js	/^        prop = fallback;$/;"	r
+property	build/main.bundle.js	/^  _.property = function(path) {$/;"	f
+propertyOf	build/main.bundle.js	/^  _.propertyOf = function(obj) {$/;"	f
+prototype	build/main.bundle.js	/^    Ctor.prototype = null;$/;"	r
+prototype	build/main.bundle.js	/^    Ctor.prototype = prototype;$/;"	r
+prototype	build/main.bundle.js	/^Chord.prototype = {$/;"	o
+prototype	build/main.bundle.js	/^Interval.prototype = {$/;"	o
+prototype	build/main.bundle.js	/^Note.prototype = {$/;"	o
+prototype	build/main.bundle.js	/^Scale.prototype = {$/;"	o
+quality	build/main.bundle.js	/^              quality = 'A';$/;"	r
+quality	build/main.bundle.js	/^              quality = 'M';$/;"	r
+quality	build/main.bundle.js	/^              quality = 'd';$/;"	r
+quality	build/main.bundle.js	/^              quality = 'm';$/;"	r
+quality	build/main.bundle.js	/^      quality = "M";$/;"	r
+quality	build/main.bundle.js	/^      quality = "m";$/;"	r
+quality	build/main.bundle.js	/^    quality = "M";$/;"	r
+quality	build/main.bundle.js	/^  quality: function() {$/;"	f
+quality	build/main.bundle.js	/^  quality: function(lng) {$/;"	f
+qualityValue	build/main.bundle.js	/^  qualityValue: function() {$/;"	f
+queue	build/main.bundle.js	/^        queue = [];$/;"	a
+queue	build/main.bundle.js	/^        queue = currentQueue.concat(queue);$/;"	r
+queue	build/main.bundle.js	/^var queue = [];$/;"	a
+queueIndex	build/main.bundle.js	/^        queueIndex = -1;$/;"	r
+queueIndex	build/main.bundle.js	/^var queueIndex = -1;$/;"	r
+random	build/main.bundle.js	/^  _.random = function(min, max) {$/;"	f
+range	build/main.bundle.js	/^  _.range = function(start, stop, step) {$/;"	f
+rank_labelings	build/main.bundle.js	/^  rank_labelings: function(labelings) {$/;"	f
+reduce	build/main.bundle.js	/^  _.reduce = _.foldl = _.inject = createReduce(1);$/;"	r
+reduceRight	build/main.bundle.js	/^  _.reduceRight = _.foldr = createReduce(-1);$/;"	r
+reducer	build/main.bundle.js	/^    var reducer = function(obj, iteratee, memo, initial) {$/;"	f
+reject	build/main.bundle.js	/^  _.reject = function(obj, predicate, context) {$/;"	f
+relative	build/main.bundle.js	/^          relative = chord.root.interval("M6");$/;"	r
+relative	build/main.bundle.js	/^          relative = chord.root.interval("m3");$/;"	r
+removeAllListeners	build/main.bundle.js	/^process.removeAllListeners = noop;$/;"	r
+removeListener	build/main.bundle.js	/^process.removeListener = noop;$/;"	r
+render	build/main.bundle.js	/^      render = new Function(settings.variable || 'obj', '_', source);$/;"	r
+replace_mixtures	build/main.bundle.js	/^function replace_mixtures(labeling) {$/;"	f
+reset	build/main.bundle.js	/^  reset: function() {$/;"	f
+resetVoicing	build/main.bundle.js	/^  resetVoicing: function() {$/;"	f
+reset_grammars	build/main.bundle.js	/^  reset_grammars: function() {$/;"	f
+rest	build/main.bundle.js	/^          rest = Array(length),$/;"	r
+rest	build/main.bundle.js	/^    rest = flatten(rest, true, true);$/;"	r
+restArguments	build/main.bundle.js	/^  _.restArguments = restArguments;$/;"	r
+restArguments	build/main.bundle.js	/^  var restArguments = function(func, startIndex) {$/;"	f
+result	build/main.bundle.js	/^          result = v;$/;"	r
+result	build/main.bundle.js	/^          result = value;$/;"	r
+result	build/main.bundle.js	/^        result = func.apply(context, args);$/;"	r
+result	build/main.bundle.js	/^      result = func.apply(context, args);$/;"	r
+result	build/main.bundle.js	/^  _.result = function(obj, path, fallback) {$/;"	f
+results	build/main.bundle.js	/^        results = Array(length);$/;"	r
+results	build/main.bundle.js	/^        results = {};$/;"	o
+root	build/main.bundle.js	/^  this.root = root;$/;"	r
+run	build/main.bundle.js	/^Item.prototype.run = function () {$/;"	f
+runClearTimeout	build/main.bundle.js	/^function runClearTimeout(marker) {$/;"	f
+runTimeout	build/main.bundle.js	/^function runTimeout(fun) {$/;"	f
+sample	build/main.bundle.js	/^  _.sample = function(obj, n, guard) {$/;"	f
+scale	build/main.bundle.js	/^    this.scale = scale.scale;$/;"	r
+scale	build/main.bundle.js	/^  Note.prototype.scale = function(scale) {$/;"	f
+scale	build/main.bundle.js	/^  this.scale = scale;$/;"	r
+scaleConstructor	build/main.bundle.js	/^function scaleConstructor(tonic, scale) {$/;"	f
+scaleDegree	build/main.bundle.js	/^  scaleDegree: function(scale) {$/;"	f
+scaleName	build/main.bundle.js	/^          scaleName = i;$/;"	r
+scaleName	build/main.bundle.js	/^    scaleName = scale;$/;"	r
+scales	build/main.bundle.js	/^var scales = {$/;"	o
+scientific	build/main.bundle.js	/^  scientific: function() {$/;"	f
+scientific	build/main.bundle.js	/^var scientific = require('scientific-notation');$/;"	r
+secondary	build/main.bundle.js	/^MIXTURES.secondary = {$/;"	o
+seen	build/main.bundle.js	/^        seen = computed;$/;"	r
+semitones	build/main.bundle.js	/^  semitones: function() {$/;"	f
+setChord	build/main.bundle.js	/^  function setChord(name) {$/;"	f
+seventh	build/main.bundle.js	/^      seventh = (seventh.direction === 'down') ? seventh.invert() : seventh;$/;"	r
+seventh	build/main.bundle.js	/^      seventh = seventh.simple().toString();$/;"	r
+shallowProperty	build/main.bundle.js	/^  var shallowProperty = function(key) {$/;"	f
+sharp	build/main.bundle.js	/^          sharp = flat = false;$/;"	r
+sharp	build/main.bundle.js	/^          sharp = true;$/;"	r
+sharp	build/main.bundle.js	/^module.exports.sharp = [-4, 7];$/;"	a
+sharp	build/main.bundle.js	/^var sharp = [-4, 7];$/;"	a
+shuffle	build/main.bundle.js	/^  _.shuffle = function(obj) {$/;"	f
+simple	build/main.bundle.js	/^      simple = this.direction() === 'down' ? vector.mul(simple, -1) : simple;$/;"	r
+simple	build/main.bundle.js	/^    simple = vector.add(simple, toAdd);$/;"	r
+simple	build/main.bundle.js	/^  simple: function() {$/;"	f
+simple	build/main.bundle.js	/^  simple: function(ignore) {$/;"	f
+simple	build/main.bundle.js	/^MIXTURES.simple = {$/;"	o
+size	build/main.bundle.js	/^  _.size = function(obj) {$/;"	f
+slice	build/main.bundle.js	/^      slice = ArrayProto.slice,$/;"	r
+smaller	build/main.bundle.js	/^  smaller: function(interval) {$/;"	f
+solfege	build/main.bundle.js	/^  solfege: function(index, showOctaves) {$/;"	f
+solfege	build/main.bundle.js	/^  solfege: function(scale, showOctaves) {$/;"	f
+sortBy	build/main.bundle.js	/^  _.sortBy = function(obj, iteratee, context) {$/;"	f
+sortedIndex	build/main.bundle.js	/^  _.sortedIndex = function(array, obj, iteratee, context) {$/;"	f
+source	build/main.bundle.js	/^      e.source = source;$/;"	r
+source	build/main.bundle.js	/^    source = "var __t,__p='',__j=Array.prototype.join," +$/;"	r
+start	build/main.bundle.js	/^      start = 0;$/;"	r
+startIndex	build/main.bundle.js	/^    startIndex = startIndex == null ? func.length - 1 : +startIndex;$/;"	r
+stdPitch	build/main.bundle.js	/^    stdPitch = coord;$/;"	r
+stdPitch	build/main.bundle.js	/^  stdPitch = stdPitch || 440;$/;"	r
+step	build/main.bundle.js	/^      step = stop < start ? -1 : 1;$/;"	r
+stop	build/main.bundle.js	/^      stop = start || 0;$/;"	r
+string	build/main.bundle.js	/^      string = string == null ? '' : '' + string;$/;"	r
+sub	build/main.bundle.js	/^  sub: function(note, interval) {$/;"	f
+subdominant	build/main.bundle.js	/^  subdominant: function(additional) {$/;"	f
+sum	build/main.bundle.js	/^  sum: function(coord) {$/;"	f
+symbol	build/main.bundle.js	/^  this.symbol = name;$/;"	r
+tap	build/main.bundle.js	/^  _.tap = function(obj, interceptor) {$/;"	f
+template	build/main.bundle.js	/^    var template = function(data) {$/;"	f
+template	build/main.bundle.js	/^  _.template = function(text, settings, oldSettings) {$/;"	f
+templateSettings	build/main.bundle.js	/^  _.templateSettings = {$/;"	o
+teoria	build/main.bundle.js	/^teoria = {$/;"	o
+teoria	build/main.bundle.js	/^var teoria = require("teoria");$/;"	r
+teoria	client/src/player.js	/^var teoria = require("teoria");$/;"	r
+teoria	src/js/player.js	/^var teoria = require("teoria");$/;"	r
+teoria_chord	client/src/player.js	/^  teoria_chord = teoria.chord(chord);$/;"	r
+third	build/main.bundle.js	/^    third = (third.direction() === 'down') ? third.invert() : third;$/;"	r
+third	build/main.bundle.js	/^    third = third.simple().toString();$/;"	r
+throttle	build/main.bundle.js	/^  _.throttle = function(func, wait, options) {$/;"	f
+throttled	build/main.bundle.js	/^    var throttled = function() {$/;"	f
+timeout	build/main.bundle.js	/^          timeout = null;$/;"	r
+timeout	build/main.bundle.js	/^        timeout = _.delay(later, wait, this, args);$/;"	r
+timeout	build/main.bundle.js	/^        timeout = setTimeout(later, remaining);$/;"	r
+timeout	build/main.bundle.js	/^        timeout = setTimeout(later, wait);$/;"	r
+timeout	build/main.bundle.js	/^      timeout = context = args = null;$/;"	r
+timeout	build/main.bundle.js	/^      timeout = null;$/;"	r
+times	build/main.bundle.js	/^  _.times = function(n, iteratee, context) {$/;"	f
+title	build/main.bundle.js	/^process.title = 'browser';$/;"	r
+toArray	build/main.bundle.js	/^  _.toArray = function(obj) {$/;"	f
+toCoord	build/main.bundle.js	/^Interval.toCoord = function(simple) {$/;"	f
+toCoord	build/main.bundle.js	/^intervalConstructor.toCoord = Interval.toCoord;$/;"	r
+toCoord	build/main.bundle.js	/^var toCoord = require('interval-coords');$/;"	r
+toString	build/main.bundle.js	/^      toString = ObjProto.toString,$/;"	r
+toString	build/main.bundle.js	/^  _.prototype.toString = function() {$/;"	f
+toString	build/main.bundle.js	/^  toString: function() {$/;"	f
+toString	build/main.bundle.js	/^  toString: function(dont) {$/;"	f
+toString	build/main.bundle.js	/^  toString: function(ignore) {$/;"	f
+toSubtract	build/main.bundle.js	/^      toSubtract = vector.mul(knowledge.sharp, -this.qualityValue());$/;"	r
+toSubtract	build/main.bundle.js	/^      toSubtract = vector.mul(knowledge.sharp, this.qualityValue());$/;"	r
+token	build/main.bundle.js	/^      token = normal.get_normal_chord(token);$/;"	r
+tonic	build/main.bundle.js	/^    this.tonic = scale.tonic;$/;"	r
+tonic	build/main.bundle.js	/^  this.tonic = tonic;$/;"	r
+tonic	build/main.bundle.js	/^  tonic = (tonic instanceof Note) ? tonic : teoria.note(tonic);$/;"	r
+transpose	build/main.bundle.js	/^  transpose: function(interval) {$/;"	f
+type	build/main.bundle.js	/^              type = 'M2';$/;"	r
+type	build/main.bundle.js	/^  type: function() {$/;"	f
+types	build/main.bundle.js	/^var types = [ "simple", "secondary", "double" ];$/;"	a
+umask	build/main.bundle.js	/^process.umask = function() { return 0; };$/;"	f
+unescape	build/main.bundle.js	/^  _.unescape = createEscaper(unescapeMap);$/;"	r
+uniqueId	build/main.bundle.js	/^  _.uniqueId = function(prefix) {$/;"	f
+unzip	build/main.bundle.js	/^  _.unzip = function(array) {$/;"	f
+update_grammar_matrix	build/main.bundle.js	/^function update_grammar_matrix(grammar, grammar_matrix, grammar_classes) {$/;"	f
+use_blues_grammar	build/main.bundle.js	/^  use_blues_grammar: function() {$/;"	f
+use_custom_grammar	build/main.bundle.js	/^  use_custom_grammar: function(name, grammar_str) {$/;"	f
+use_diatonic_grammar	build/main.bundle.js	/^  use_diatonic_grammar: function() {$/;"	f
+value	build/main.bundle.js	/^    value: function(key) {$/;"	f
+value	build/main.bundle.js	/^  _.prototype.value = function() {$/;"	f
+value	build/main.bundle.js	/^  value: function() {$/;"	f
+value	client/src/player.js	/^    Tone.Transport.bpm.value = 100;$/;"	r
+valueOf	build/main.bundle.js	/^  _.prototype.valueOf = _.prototype.toJSON = _.prototype.value;$/;"	r
+values	build/main.bundle.js	/^  _.values = function(obj) {$/;"	f
+variations	build/main.bundle.js	/^      progression.variations = { relative:  relative_modulations };$/;"	o
+vector	build/main.bundle.js	/^var vector = require('.\/vector');$/;"	r
+version	build/main.bundle.js	/^process.version = ''; \/\/ empty string to avoid regexp issues$/;"	r
+versions	build/main.bundle.js	/^process.versions = {};$/;"	o
+voicing	build/main.bundle.js	/^  voicing: function(voicing) {$/;"	f
+where	build/main.bundle.js	/^  _.where = function(obj, attrs) {$/;"	f
+without	build/main.bundle.js	/^      without = vector.sub(this.coord, toSubtract);$/;"	r
+wrap	build/main.bundle.js	/^  _.wrap = function(func, wrapper) {$/;"	f
+zip	build/main.bundle.js	/^  _.zip = restArguments(_.unzip);$/;"	r
