@@ -8,12 +8,12 @@ x play chord progression using synth sounds
 -----
 
 * delete arbitrary chord from playback
-* show functional harmony of chord in playback area (instead of absolute name)
+x show functional harmony of chord in playback area (instead of absolute name)
 * mixtures (modal and secondary mixtures)
 * color the tonic / subdominant / dominant tiles
 * tempo slider / ability to set tempo for progressions
 * chord alterations (sus, add9, etc): can click a chord and alter it somehow
-* style page more
+x style page more
 * shareable progressions
 * measure UI: ability to set when a chord will play in a measure. something like a measure box and you can set on what beat a chord will play (instead of one measure per chord)
-* play a chord by clicking it in the progression area
+x play a chord by clicking it in the progression area
