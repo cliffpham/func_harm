@@ -75,7 +75,7 @@ export default {
       return result
     },
     playChords(){
-      IS.progression.play_progression(this.selectedChords);
+      player.play_progression(this.selectedChords);
     },
     removeChord(){
       this.selectedChords.pop();
