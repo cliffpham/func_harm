@@ -1,15 +1,13 @@
 <template>
   <b-container>
-    <b-row align-v="center" style="height: 200px;">
+    <b-row class="text-center" style="height: 200px;">
       <b-col offset-md="1">
         <div id="keySelector">
           {{key}}
         </div>
         <div>
           <b-form-select v-model="key">
-            <option value="A">A</option>
-            <option value="B">B</option>
-            <option value="E">E</option>
+            <option v-for="key in signatures" :value="key">{{key}}</option>
           </b-form-select>
         </div>
         <b-button :pressed.sync="majorOrMinor" v-on:click="getTones()" variant="primary">Toggle Me</b-button>
@@ -17,18 +15,29 @@
       </b-col>
       <b-col cols="8">
         <b-row>
-          <div id="chord" v-on:click="findChord(0)">{{tones[0]}}</div>
-          <div id="chord" v-on:click="findChord(2)">{{tones[2]}}</div>
-          <div id="chord" v-on:click="findChord(5)">{{tones[5]}}</div>
+          <div class="chord" v-on:click="playOrAdd(0)">{{tones[0]}}</div>
+          <div class="chord" v-on:click="playOrAdd(2)">{{tones[2]}}</div>
+          <div class="chord" v-on:click="playOrAdd(5)">{{tones[5]}}</div>
         </b-row>
         <b-row>
-          <div id="chord" v-on:click="findChord(3)">{{tones[3]}}</div>
-          <div id="chord" v-on:click="findChord(1)">{{tones[1]}}</div>
+          <div class="chord" v-on:click="playOrAdd(3)">{{tones[3]}}</div>
+          <div class="chord" v-on:click="playOrAdd(1)">{{tones[1]}}</div>
         </b-row>
         <b-row>
-          <div id="chord" v-on:click="findChord(4)">{{tones[4]}}</div>
-          <div id="chord" v-on:click="findChord(6)">{{tones[6]}}</div>
+          <div class="chord" v-on:click="playOrAdd(4)">{{tones[4]}}</div>
+          <div class="chord" v-on:click="playOrAdd(6)">{{tones[6]}}</div>
         </b-row>
+      </b-col>
+    </b-row>
+    <b-row class="text-center">
+      <b-col>
+        <h1> Selected Chords </h1>
+        <div id="selectedChords">
+          <div v-for="chord in selectedChords" class="chord">{{chord}}
+        </div>
+        <b-button v-on:click="removeChord"> Remove </b-button>
+        <b-button v-on:click="playChords" variant="primary"> Play </b-button>
+        </div>
       </b-col>
     </b-row>
   </b-container>
@@ -46,6 +55,9 @@ export default {
       majorOrMinor: true,
       i: 0,
       tones: IS.progression.major,
+      signatures: ['C', 'F', 'Bb', 'Eb', 'A', 'D', 'Gb', 'Cb', 'G', 'D', 'A', 'E', 'B', 'F#', 'C#'],
+      selectedChords: [],
+      numClicks: 0,
     }
   },
   methods: {
@@ -60,9 +72,31 @@ export default {
       let tones;
       let result;
       result = IS.progression.get_chord_for_function(this.tones[i], this.key); 
-      console.log(result);
-      player.play_chord(result);
+      return result
     },
+    playChords(){
+      IS.progression.play_progression(this.selectedChords);
+    },
+    removeChord(){
+      this.selectedChords.pop();
+    },
+    playOrAdd(i){
+      const result = this.findChord(i);
+      this.numClicks += 1
+      if (this.numClicks === 1){
+        const self = this;
+        setTimeout(() => {
+          switch (self.numClicks) {
+              case 1:
+                player.play_chord(result);
+                break;
+              default:
+                this.selectedChords.push(result);
+          }
+          self.numClicks = 0;
+        }, 200);
+      }
+    }
   },
 };
 </script>
@@ -88,11 +122,16 @@ export default {
   justify-content: center;
 }
 
-#chord {
+.chord {
   width: 50px;
   height: 50px;
   border: dotted 1px #000;
   margin: 2px;
   text-align: center;
+}
+
+#selectedChords {
+  display: flex;
+  flex-direction: row;
 }
 </style>
