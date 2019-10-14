@@ -1,13 +1,16 @@
 <template>
   <b-container>
 
-    <b-row class="text-center" style="margin-bottom: 2%; border: dotted 1px #000;">
+    <b-row class="text-center" style="margin-bottom: 2%">
       <b-col offset-md="1" align-self="center">
         <div style="display: inline-block;">
           <div style="display: flex; flex-direction: row;">
-            <div class="selectors">*Tempo</div>
-            <div class="selectors">*Mixtures</div>
-            <div class="selectors" v-on:click="getTones">Major or Minor</div>
+            <div class="selectors">
+              <b-form-select v-model="dur" size="lg">
+                <option v-for=" lens in noteLengths" v-bind:value="lens.value">{{lens.len}}</option>
+              </b-form-select>
+            </div>
+            <div class="selectors key" v-on:click="getTones">Major/Minor</div>
             <div class="selectors">
               <b-form-select v-model="key" size="lg">
                 <option v-for="key in signatures" :value="key">{{key}}</option>
@@ -31,27 +34,28 @@
           <div class="chord tonic" v-on:click="playOrAdd(5)">{{tones[5]}}</div>
         </b-row>
         <b-row>
-          <div class="chord" v-on:click="playOrAdd(3)">{{tones[3]}}</div>
-          <div class="chord" v-on:click="playOrAdd(1)">{{tones[1]}}</div>
+          <div class="chord subdom" v-on:click="playOrAdd(3)">{{tones[3]}}</div>
+          <div class="chord subdom" v-on:click="playOrAdd(1)">{{tones[1]}}</div>
         </b-row>
         <b-row>
-          <div class="chord" v-on:click="playOrAdd(4)">{{tones[4]}}</div>
-          <div class="chord" v-on:click="playOrAdd(6)">{{tones[6]}}</div>
+          <div class="chord dom" v-on:click="playOrAdd(4)">{{tones[4]}}</div>
+          <div class="chord dom" v-on:click="playOrAdd(6)">{{tones[6]}}</div>
         </b-row>
       </b-col>
     </b-row>
 
-    <b-row class="text-center" style="border: dotted 1px #000;">
-      <b-col align-self="start">
+    <b-row class="text-center">
+      <b-col offset-md="1">
           <div style="display: flex; flex-direction: row;">
             <div id="selectedChords">
               <div class="buttons" v-on:click="playChords"><font-awesome-icon icon="play"/></div>
-            <div class="buttons" v-on:click="removeChord"><font-awesome-icon icon="trash"/></div>
+            <div class="buttons" v-on:click="removeChords"><font-awesome-icon icon="trash"/></div>
             </div>
-            <div id="selectedChords">
-              <div v-for="chord in selectedChords"
+            <div id="chordDisplay">
+              <div v-for="(chord, index) in selectedChords"
+                   v-bind:key="chord"
                    class="selectedChord"
-                   v-on:click="play(chord[0])">
+                   v-on:click="playOrRemove(chord[0], index)">
                   <h6>{{chord[1]}}</h6>
                   <p>{{chord[0]}}</p>
               </div>
@@ -73,10 +77,19 @@ export default {
     return {
       key: 'C',
       majorOrMinor: true,
+      dur: '4n',
       i: 0,
       tones: IS.progression.major,
       signatures: ['C', 'F', 'Bb', 'Eb', 'A', 'D', 'Gb', 'Cb', 'G', 'D', 'A', 'E', 'B', 'F#', 'C#'],
       selectedChords: [],
+      noteLengths: [
+        { len: '1', value: '1n' },
+        { len: '1/2', value: '2n' },
+        { len: '1/4', value: '4n' },
+        { len: '1/8', value: '8n' },
+        { len: '1/16', value: '16n' },
+        { len: '1/32', value: '32n'}
+      ],
       numClicks: 0,
     };
   },
@@ -94,9 +107,6 @@ export default {
       const result = IS.progression.get_chord_for_function(this.tones[i], this.key);
       return result;
     },
-    play(chord) {
-      player.play_chord(chord);
-    },
     playChords() {
       const temp = [];
       for (let i = 0; i < this.selectedChords.length; i += 1) {
@@ -104,8 +114,8 @@ export default {
       }
       player.play_progression(temp);
     },
-    removeChord() {
-      this.selectedChords.pop();
+    removeChords() {
+      this.selectedChords = [];
     },
     playOrAdd(i) {
       const result = this.findChord(i);
@@ -116,10 +126,26 @@ export default {
         setTimeout(() => {
           switch (self.numClicks) {
             case 1:
-              player.play_chord(result);
+              player.play_chord(result, this.dur);
               break;
             default:
               self.selectedChords.push([result, funcHarm]);
+          }
+          self.numClicks = 0;
+        }, 200);
+      }
+    },
+    playOrRemove(chord,i) {
+      this.numClicks += 1;
+      if (this.numClicks === 1) {
+        const self = this;
+        setTimeout(() => {
+          switch (self.numClicks) {
+            case 1:
+              player.play_chord(chord, this.dur);
+              break;
+            default:
+              this.selectedChords.splice(i,1);
           }
           self.numClicks = 0;
         }, 200);
@@ -134,7 +160,11 @@ export default {
   width: 150px;
   height: 150px;
   display: inline-block;
-  border: dotted 3px #000;
+  border: 0.3rem outset lightgrey;
+  border-radius: 5px;
+  -webkit-box-shadow: 11px 11px 5px -10px rgba(0,0,0,0.64);
+  -moz-box-shadow: 11px 11px 5px -10px rgba(0,0,0,0.64);
+  box-shadow: 11px 11px 5px -10px rgba(0,0,0,0.64);
 }
 
 #selectorChords {
@@ -159,16 +189,23 @@ export default {
 .selectors {
   width: 100px;
   height: 50px;
-  border: dotted 1px #100;
+  border: 1px outset lightgrey;
+  border-radius: 5px;
   margin: 2px;
   text-align: center;
+}
+
+.key {
+  vertical-align: middle;
+  line-height: 50px;
 }
 
 .buttons {
   width: 50px;
   height: 50px;
-  border: dotted 1px #000;
+  border: 1px outset lightgrey;
   margin-top: 2px;
+  margin-right: 2px;
   margin-bottom: 2px;
   text-align: center;
   vertical-align: middle;
@@ -183,21 +220,54 @@ export default {
   text-align: center;
   vertical-align: middle;
   line-height: 50px;
+  border: 1px outset lightgrey;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -user-select: none;
 }
 
 .tonic {
+ background-color: #dedff1;
+}
+
+.subdom {
+ background-color: #4c4a73;
+}
+
+.dom {
+  background-color: #242747;
+  color: #FFF;
 }
 
 .selectedChord {
   width: 50px;
   height: 50px;
-  border: dotted 1px #000;
-  margin: 2px;
+  border: solid 1px #000;
   text-align: center;
+  background-color: #9492c1;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -user-select: none;
 }
 
 #selectedChords {
   display: flex;
   flex-direction: row;
+}
+
+#chordDisplay {
+  padding-top: 2px;
+  padding-left: 2px;
+  display: grid;
+  grid-template-rows: 50px;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-row-gap: 0.2em;
+  grid-column-gap: 0.2em;
 }
 </style>
