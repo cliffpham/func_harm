@@ -1,5 +1,4 @@
 # functional harmony finder
-=====
 ##description
 a web appliction to help locate interesting chord progressions utilizing the core principal of a music theory concept known as harmonic functions.
 
@@ -10,7 +9,6 @@ harmonic functions can be broken down into three major categories
 
 recommended reading for more information:
 [Harmonic functions from open music theory](http://openmusictheory.com/harmonicFunctions.html)
-=====
 ##live version of the application 
 [app](https://www.functionalharms.com/)
 
