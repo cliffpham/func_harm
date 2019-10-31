@@ -1,6 +1,5 @@
 <template>
   <b-container>
-
     <b-row class="text-center" style="margin-bottom: 2%">
       <b-col offset-md="1" align-self="center">
         <div style="display: inline-block;">
@@ -16,6 +15,7 @@
                 <option v-for="key in signatures" :value="key">{{key}}</option>
               </b-form-select>
             </div>
+            <div class="selectors key" v-on:click="activateNeg">Negative</div>
           </div>
         </div>
       </b-col>
@@ -29,17 +29,17 @@
       </b-col>
       <b-col align-self="center">
         <b-row>
-          <div class="chord tonic" v-on:click="playOrAdd(0)">{{tones[0]}}</div>
-          <div class="chord tonic" v-on:click="playOrAdd(2)">{{tones[2]}}</div>
-          <div class="chord tonic" v-on:click="playOrAdd(5)">{{tones[5]}}</div>
+          <div v-bind:class="[negHarm ? 'chord tonic' : 'chord tonicNeg']" v-on:click="playOrAdd(0)">{{tones[0]}}</div>
+          <div v-bind:class="[negHarm ? 'chord tonic' : 'chord tonicNeg']" v-on:click="playOrAdd(2)">{{tones[2]}}</div>
+          <div v-bind:class="[negHarm ? 'chord tonic' : 'chord tonicNeg']" v-on:click="playOrAdd(5)">{{tones[5]}}</div>
         </b-row>
         <b-row>
-          <div class="chord subdom" v-on:click="playOrAdd(3)">{{tones[3]}}</div>
-          <div class="chord subdom" v-on:click="playOrAdd(1)">{{tones[1]}}</div>
+          <div v-bind:class="[negHarm ? 'chord subdom' : 'chord subdomNeg']" v-on:click="playOrAdd(3)">{{tones[3]}}</div>
+          <div v-bind:class="[negHarm ? 'chord subdom' : 'chord subdomNeg']" v-on:click="playOrAdd(1)">{{tones[1]}}</div>
         </b-row>
         <b-row>
-          <div class="chord dom" v-on:click="playOrAdd(4)">{{tones[4]}}</div>
-          <div class="chord dom" v-on:click="playOrAdd(6)">{{tones[6]}}</div>
+          <div v-bind:class="[negHarm ? 'chord dom' : 'chord domNeg']" v-on:click="playOrAdd(4)">{{tones[4]}}</div>
+          <div v-bind:class="[negHarm ? 'chord dom' : 'chord domNeg']" v-on:click="playOrAdd(6)">{{tones[6]}}</div>
         </b-row>
       </b-col>
     </b-row>
@@ -49,7 +49,7 @@
           <div style="display: flex; flex-direction: row;">
             <div id="selectedChords">
               <div class="buttons" v-on:click="playChords"><font-awesome-icon icon="play"/></div>
-            <div class="buttons" v-on:click="removeChords"><font-awesome-icon icon="trash"/></div>
+              <div class="buttons" v-on:click="removeChords"><font-awesome-icon icon="trash"/></div>
             </div>
             <div id="chordDisplay">
               <div v-for="(chord, index) in selectedChords"
@@ -57,7 +57,8 @@
                    class="selectedChord"
                    v-on:click="playOrRemove(chord[0], index)">
                   <h6>{{chord[1]}}</h6>
-                  <p>{{chord[0]}}</p>
+                  <h5>{{chord[0]}}</h5>
+                  <h6>{{chord[2]}}</h6>
               </div>
           </div>
           </div>
@@ -77,6 +78,7 @@ export default {
     return {
       key: 'C',
       majorOrMinor: true,
+      negHarm: false,
       dur: '4n',
       i: 0,
       tones: IS.progression.major,
@@ -103,6 +105,15 @@ export default {
         this.majorOrMinor = true;
       }
     },
+    activateNeg() {
+      console.log('negative harm state: ' + this.negHarm);
+      if (this.negHarm == false){
+        this.negHarm = true;
+      }
+      else {
+        this.negHarm = false;
+      }
+    },
     findChord(i) {
       const result = IS.progression.get_chord_for_function(this.tones[i], this.key);
       return result;
@@ -126,10 +137,11 @@ export default {
         setTimeout(() => {
           switch (self.numClicks) {
             case 1:
+              console.log(player.get_chord(result));
               player.play_chord(result, this.dur);
               break;
             default:
-              self.selectedChords.push([result, funcHarm]);
+              self.selectedChords.push([result, funcHarm, this.key]);
           }
           self.numClicks = 0;
         }, 200);
@@ -198,6 +210,13 @@ export default {
 .key {
   vertical-align: middle;
   line-height: 50px;
+  border: 1px outset lightgrey;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -user-select: none;
 }
 
 .buttons {
@@ -233,8 +252,16 @@ export default {
  background-color: #dedff1;
 }
 
+.tonicNeg {
+ background-color: #d1ffe8;
+}
+
 .subdom {
  background-color: #4c4a73;
+}
+
+.subdomNeg {
+ background-color: #04A662;
 }
 
 .dom {
@@ -242,9 +269,14 @@ export default {
   color: #FFF;
 }
 
+.domNeg {
+ background-color: #006432;
+ color: #FFF;
+}
+
 .selectedChord {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   border: solid 1px #000;
   text-align: center;
   background-color: #9492c1;
@@ -256,6 +288,19 @@ export default {
   -user-select: none;
 }
 
+.selectedChordNeg {
+  width: 100px;
+  height: 100px;
+  border: solid 1px #000;
+  text-align: center;
+  background-color: #lightgreen;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -user-select: none;
+}
 #selectedChords {
   display: flex;
   flex-direction: row;
@@ -265,8 +310,8 @@ export default {
   padding-top: 2px;
   padding-left: 2px;
   display: grid;
-  grid-template-rows: 50px;
-  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: 100px;
+  grid-template-columns: 100px 100px 100px 100px;
   grid-row-gap: 0.2em;
   grid-column-gap: 0.2em;
 }
