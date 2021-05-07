@@ -17,7 +17,7 @@
     "isnext": "0.0.3",
     "teoria": "^2.5.0",
     "tone": "^13.8.25",
-    "underscore": "^1.9.1",
+    "underscore": "^1.12.1",
     "serialize-javascript": ">=2.1.1",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
